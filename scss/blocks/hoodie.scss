@@ -1,0 +1,57 @@
+.hoodie{
+    margin-top: 50px;
+    &-btn{
+        position: relative;
+        margin-right: 60px;
+        margin-top: 25px;
+    }
+    &-wrapper{
+        margin-left: 60px;
+        & .swiper-button-prev, &.swiper-button-next{
+            position: static;
+            & path{
+                fill: #323232;
+            }
+        }
+        & .swiper-button-prev:after, & .swiper-button-next:after{
+            display: none;
+        }
+    }
+    &-background{
+        border-radius: 15px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+        min-height: 470px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 30px 35px;
+    }
+    &-title{
+        color: #FFF;
+    }
+    &-link{
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        margin-top: 15px;
+        transition: all .3s;
+
+        & span{
+            color: #FFF;
+            font-family: 'Days One';
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 115%;
+            transition: all .3s;
+        }
+        &:hover{
+            & span{
+                text-decoration: underline;
+            }
+        }
+    }
+
+}

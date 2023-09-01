@@ -1,0 +1,55 @@
+.hero {
+    &-wrapper {
+        padding: 25px 0 65px;
+        border-radius: 15px;
+        background: linear-gradient(348deg, rgba(0, 13, 46, 0.60) 9.31%, rgba(0, 0, 0, 0.00) 119.33%), url("../img/hero-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    &-inner {
+        padding: 0 95px;
+    }
+
+    &-heading {
+        color: #FFF;
+        text-align: center;
+        font-family: 'Days One';
+        font-size: 73px;
+        font-weight: 400;
+        line-height: 115%;
+        text-transform: uppercase;
+        margin-bottom: 55px;
+    }
+
+    &-title {
+        color: #FFF;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 115%;
+    }
+
+    &-link {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        transition: all .3s;
+
+        & span {
+            color: #FFF;
+            font-family: 'Days One';
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 115%;
+            transition: all .3s;
+        }
+
+        &:hover {
+            & span{
+                text-decoration: underline;
+            }
+        }
+    }
+}

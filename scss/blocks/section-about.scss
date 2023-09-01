@@ -1,0 +1,26 @@
+.section-about{
+    &__wrapper{
+        background-image: url('../img/football.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 385px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 40px;
+        border-radius: 15px;
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        & span{
+            color: #FFF;
+            font-family: 'Days One';
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 115%;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.sale{
+    margin-top: 50px;
+    &-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 35px;
+        &__link{
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            & span{
+                color: #242424;
+                font-family: $rubik;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 140%;
+            }
+        }
+    }
+    &-background{
+        height: 230px;
+        border-radius: 15px;
+    }
+    &-btn{
+        position: relative;
+        margin-top: 25px;
+        & .swiper-button-prev, &.swiper-button-next{
+            position: static;
+            & path{
+                fill: #323232;
+            }
+        }
+        & .swiper-button-prev:after, & .swiper-button-next:after{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.advg{
+    margin-top: 150px;
+    &-title{
+        margin-bottom: 35px;
+    }
+    &-cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 40px;
+    }
+    &-card{
+        position: relative;
+        color: #242424;
+        font-family: $roboto;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 140%; 
+        padding: 35px 0 35px 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 75%;
+        height: 100%;
+        border-radius: 101.5px;
+        z-index: -1;
+    }
+}

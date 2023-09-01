@@ -1,0 +1,155 @@
+@import 'base.scss';
+@import 'header.scss';
+@import 'footer.scss';
+.main{
+    margin-top: 20px;
+    &-nav{
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+        color: #696969;
+        font-family: $rubik;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+        a{
+            color: #696969;
+        }
+    }
+    &-title{
+        text-align: center;
+        margin: 50px 0;
+    }
+    &-filter{
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        & .active{
+            border: 1px solid #242424;
+            background: #242424;
+            color: #FFF;    
+        }
+    }
+    &-btn{
+        display: flex;
+        align-items: center;
+        column-gap: 50px;
+        margin-bottom: 35px;
+        &__active{
+            color: #242424;
+            font-family: 'Days One';
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 115%;
+        }
+        &__pass{
+            color: #696969;
+            font-family: 'Days One';
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 115%;
+        }
+    }
+    &-cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+        row-gap: 30px;
+        margin-top: 40px;
+    }
+    & .card{
+        &-image{
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 345px;
+            border-radius: 15px;
+            padding: 20px;
+        }
+        &-btn{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            row-gap: 15px;
+            & button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                background: #FFFFFF;
+                border-radius: 100%;
+                width: 35px;
+                height: 35px;
+                & svg{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        &-info{
+            margin-top: 20px;
+            &__name{
+                color: #242424;
+                font-family: $rubik;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 140%;
+                margin-bottom: 5px;
+            }
+            &__product{
+                color: #696969;
+                font-family: $rubik;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 140%; 
+                text-decoration-line: underline;    
+                margin-bottom: 15px;
+            }
+            &__price{
+                color: #242424;
+                font-family: $rubik;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 140%; 
+            }
+        }
+    }
+    & .pagination{
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        column-gap: 15px;
+        & button{
+            border: none;
+            background: transparent;
+        }
+    }
+    & .page-link{
+        color: #696969;
+        font-family: $rubik;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 140%;
+        &.active{
+            color:  #242424;
+        }
+    }
+    &-swiper{
+        & .main-title{
+            text-align: left;
+            margin-bottom: 40px;
+        }
+        & .swiper-button-prev, &.swiper-button-next{
+            position: static;
+            & path{
+                fill: #323232;
+            }
+        }
+        & .swiper-button-prev:after, & .swiper-button-next:after{
+            display: none;
+        }
+    }
+    &-btn{
+        position: relative;
+        margin-top: 40px;
+    }
+}

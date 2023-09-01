@@ -1,0 +1,21 @@
+.text{
+    margin-top: 150px;
+    &-wrapper{
+        display: flex;
+        align-items: center;
+        column-gap: 65px;
+    }
+    &-right{
+        & p{
+            color: #242424;
+            font-family: $rubik;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 140%; 
+            margin-bottom: 30px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
