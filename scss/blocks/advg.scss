@@ -1,5 +1,14 @@
 .advg{
     margin-top: 150px;
+    @media(max-width: $laptop){
+        margin-top: 120px;
+    }
+    @media(max-width: $tablet){
+        margin-top: 80px;
+    }
+    @media(max-width: $L-mobile){
+        margin-top: 30px;
+    }
     &-title{
         margin-bottom: 35px;
     }
@@ -7,6 +16,10 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 40px;
+        @media(max-width: $L-mobile){
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 15px;
+        }
     }
     &-card{
         position: relative;
@@ -19,6 +32,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @media(max-width: $L-mobile){
+            font-size: 14px;
+            padding: 30px 0 30px 45px;
+        }
+        @media(max-width: 375px){
+            padding: 30px 40px;
+        }
     }
     &-background{
         position: absolute;
@@ -28,5 +48,12 @@
         height: 100%;
         border-radius: 101.5px;
         z-index: -1;
+        @media(max-width: $L-mobile){
+            width: 90%;
+        }
+        @media(max-width: 375px){
+            width: 100%;
+            border-radius: 70px;
+        }
     }
 }

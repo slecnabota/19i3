@@ -2,25 +2,52 @@
     &-wrapper {
         padding: 25px 0 65px;
         border-radius: 15px;
-        background: linear-gradient(348deg, rgba(0, 13, 46, 0.60) 9.31%, rgba(0, 0, 0, 0.00) 119.33%), url("../img/hero-bg.png");
+        background-image: linear-gradient(348deg, rgba(0, 13, 46, 0.60) 9.31%, rgba(0, 0, 0, 0.00) 119.33%), url("../img/hero-bg.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
+        @media(max-width: $mobile){
+            background-position: top center;
+            background-image: linear-gradient(357deg, rgba(0, 0, 0, 0.60) -34.63%, rgba(0, 0, 0, 0.00) 147.95%), url("../img/hero-bg_mob.png");
+            padding: 20px 0;
+        }
     }
 
     &-inner {
         padding: 0 95px;
+        
+        @media(max-width: $L-mobile) {
+            padding: 0 30px;
+        }
+
+        @media(max-width: $mobile) {
+            padding: 0 15px;
+        }
     }
 
     &-heading {
+        width: 100%;
         color: #FFF;
         text-align: center;
         font-family: 'Days One';
-        font-size: 73px;
+        font-size: 5vw;
         font-weight: 400;
         line-height: 115%;
         text-transform: uppercase;
         margin-bottom: 55px;
+        @media(max-width: $tablet){
+            margin-bottom: 35px;
+        }
+        @media(max-width: $L-mobile) {
+            font-size: 52px;
+        }
+        @media(max-width: $mobile) {
+            text-align: left;
+            font-size: 48px;
+        }
+        @media(max-width: 375px){
+            font-size: 42px;
+        }
     }
 
     &-title {
@@ -28,6 +55,18 @@
         font-size: 32px;
         font-weight: 400;
         line-height: 115%;
+        @media(max-width: $laptop){
+            br {
+                display: none;
+            }
+        }
+        @media(max-width: $tablet){
+            font-size: 26px;
+        }
+        @media(max-width: $L-mobile) {
+            font-size: 20px;
+
+        }
     }
 
     &-link {
@@ -37,6 +76,12 @@
         column-gap: 15px;
         transition: all .3s;
 
+        & img {
+            @media(max-width: $mobile) {
+                width: 20px;
+            }
+        }
+
         & span {
             color: #FFF;
             font-family: 'Days One';
@@ -44,10 +89,22 @@
             font-weight: 400;
             line-height: 115%;
             transition: all .3s;
+
+            @media(max-width: $laptop) {
+                font-size: 28px;
+            }
+
+            @media(max-width: $tablet) {
+                font-size: 22px;
+            }
+
+            @media(max-width: $mobile) {
+                font-size: 20px;
+            }
         }
 
         &:hover {
-            & span{
+            & span {
                 text-decoration: underline;
             }
         }

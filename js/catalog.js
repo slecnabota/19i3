@@ -73,15 +73,45 @@ function filterButtonClickHandler(filterType) {
         button.classList.remove('active');
     });
     document.querySelector(`.${filterType}`).classList.add('active');
+    // 
+    const newUrl = window.location.pathname + `?filter=${currentFilter}`;
+    window.history.pushState({}, '', newUrl);
+
+    // Удаление класса "active" у всех кнопок и добавление его к текущей
+    document.querySelectorAll('.main-filter button').forEach(button => {
+        button.classList.remove('active');
+    });
+    document.querySelector(`.${filterType}`).classList.add('active');
 }
 
 document.querySelectorAll('.main-filter button').forEach(button => {
     button.addEventListener('click', () => filterButtonClickHandler(button.classList[0]));
 });
+// Функция для извлечения параметров из URL
+function getUrlParameter(name) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+    const results = regex.exec(window.location.href);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+// Функция для фильтрации карточек на странице каталога
+function filterCardsByParameter() {
+    const filterParam = getUrlParameter('filter');
+    if (filterParam) {
+        filterButtonClickHandler(filterParam);
+    }
+}
+
+// Вызов функции для фильтрации карточек при загрузке страницы
+filterCardsByParameter();
 
 // По умолчанию показываем все карточки
 hideAllCards();
 showCardsByType(currentFilter, currentPage);
+filterCardsByParameter(); // Вызов после определения getUrlParameter
 updatePagination();
 
 
@@ -105,4 +135,134 @@ const mainSwiper = new Swiper('#mainSwiper', {
             spaceBetween: 20
         }
     }
+});
+//swiper
+const popupSwiper = new Swiper('#popupSwiper', {
+    direction: 'horizontal',
+    loop: false,
+    navigation: {
+        nextEl: '#popupNext',
+        prevEl: '#popupPrev',
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 10
+        },
+        // when window width is >= 640px
+        768:{
+            slidesPerView: 2.5,
+            spaceBetween: 20
+        },
+        1024: {
+            slidesPerView: 3.5,
+            spaceBetween: 20
+        }
+    }
+});
+
+
+
+
+
+const popup = document.getElementById("popup");
+const closePopup = document.getElementById("close-popup");
+const colorSelect = document.getElementById("color-select");
+const sizeSelect = document.getElementById("size-select");
+
+function openPopup() {
+    popup.style.display = "flex";
+}
+
+function closePopupFunc() {
+    popup.style.display = "none";
+}
+
+const cards = document.querySelectorAll(".item.card");
+cards.forEach((card) => {
+    card.addEventListener("click", function () {
+        const productIdAttr = card.getAttribute("data-product-id");
+        if (productIdAttr !== null) {
+            const productId = parseInt(productIdAttr);
+            openPopup();
+        }
+    });
+});
+
+closePopup.addEventListener("click", closePopupFunc);
+
+
+
+function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+
+
+
+
+
+
+
+
+
+
+//   
+var swiper = new Swiper('.swiper-container2', {
+    direction: 'horizontal',
+    slidesPerView: 3,
+    loop: true,
+    freeMode: true,
+    watchSlidesProgress: true,
+    spaceBetween: 0
+},);
+
+var mySwiper = new Swiper('.swiper-container', {
+    thumbs: {
+        swiper: swiper,
+    },
+},)
+
+//
+
+// Получаем все варианты цветов
+const colorOptions = document.querySelectorAll('.color-option');
+
+// Элемент, в котором будет отображаться выбранный цвет
+const selectedColorElement = document.getElementById('selected-color');
+
+// Функция для обработки выбора цвета
+function handleColorSelection(event) {
+    // Сбрасываем стиль для всех вариантов цвета
+    colorOptions.forEach(option => option.classList.remove('selected'));
+
+    // Устанавливаем стиль для выбранного варианта
+    const selectedColor = event.target.getAttribute('data-color');
+    event.target.classList.add('selected');
+
+    // Отображаем выбранный цвет
+    selectedColorElement.textContent = `Выбран цвет: ${selectedColor}`;
+}
+
+// Добавляем обработчик события для каждого варианта цвета
+colorOptions.forEach(option => {
+    option.addEventListener('click', handleColorSelection);
 });

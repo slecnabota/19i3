@@ -1,12 +1,18 @@
 .hats{
     margin-top: 50px;
+    @media(max-width: $L-mobile){
+        margin-top: 30px;
+    }
     &-btn{
         position: relative;
-        margin-right: 60px;
+        margin-right: 4%;
         margin-top: 25px;
+        @media(max-width: $L-mobile){
+            margin-right: 20px;
+        }
     }
     &-wrapper{
-        margin-left: 60px;
+        margin-left: 4%;
         & .swiper-button-prev, &.swiper-button-next{
             position: static;
             & path{
@@ -15,6 +21,9 @@
         }
         & .swiper-button-prev:after, & .swiper-button-next:after{
             display: none;
+        }
+        @media(max-width: $L-mobile){
+            margin-left: 20px;
         }
     }
     &-background{
@@ -28,6 +37,22 @@
         flex-direction: column;
         justify-content: flex-end;
         padding: 30px 35px;
+        @media(max-width: $laptop){
+            min-height: 420px;
+        }
+        @media(max-width: $tablet){
+            min-height: 350px;
+        }
+        @media(max-width: $L-mobile){
+            min-height: 320px;
+        }
+        @media(max-width: $mobile){
+            min-height: 300px;
+            padding: 10px;
+        }
+        @media(max-width: 375px){
+            min-height: 250px;
+        }
     }
     &-title{
         color: #FFF;
@@ -38,7 +63,14 @@
         column-gap: 15px;
         margin-top: 15px;
         transition: all .3s;
-
+        @media(max-width:$mobile){
+            column-gap: 5px;
+        }
+        & img{
+            @media(max-width: $mobile){
+                width: 20px;
+            }
+        }
         & span{
             color: #FFF;
             font-family: 'Days One';
@@ -46,6 +78,15 @@
             font-weight: 400;
             line-height: 115%;
             transition: all .3s;
+            @media(max-width: $laptop){
+                font-size: 28px;
+            }
+            @media(max-width: $tablet){
+                font-size: 22px;
+            }
+            @media(max-width: $mobile){
+                font-size: 20px;
+            }
         }
         &:hover{
             & span{

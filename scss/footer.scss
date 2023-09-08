@@ -2,11 +2,22 @@
     margin-top: 150px;
     background-color: #242424;
     padding: 45px 0;
+    @media(max-width: $mobile){
+        padding: 30px 40px;
+    }
     &-wrapper{
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         max-width: 975px;
+        @media(max-width: $mobile){
+            flex-direction: column;
+        }
+    }
+    &-logo{
+        @media(max-width: $mobile){
+            width: 70px;
+        }
     }
     &-mail{
         color: #FFF;
@@ -21,6 +32,12 @@
         display: flex;
         align-items: flex-start;
         column-gap: 100px;
+        @media(max-width: $L-mobile){
+            column-gap: 50px;
+        }
+        @media(max-width: $mobile){
+            flex-direction: column;
+        }
     }
     &-nav{
         display: flex;
@@ -32,6 +49,9 @@
             font-size: 14px;
             font-weight: 400;
             line-height: normal;
+        }
+        @media(max-width:$mobile){
+            margin: 45px 0;
         }
     }
     &-right{

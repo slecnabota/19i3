@@ -4,12 +4,20 @@
         background-repeat: no-repeat;
         background-size: cover;
         height: 385px;
+        background-position: center center;
 
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         padding: 40px;
         border-radius: 15px;
+        @media(max-width: $L-mobile){
+            background-position: top center;
+            padding: 20px;
+        }
+        @media(max-width: $mobile){
+            background-image: url("../img/football-mobile.png");
+        }
     }
     &__link{
         display: flex;
@@ -21,6 +29,15 @@
             font-size: 32px;
             font-weight: 400;
             line-height: 115%;
+            @media(max-width: $laptop){
+                font-size: 28px;
+            }
+            @media(max-width: $tablet){
+                font-size: 24px;
+            }
+            @media(max-width: $mobile){
+                font-size: 20px;
+            }
         }
     }
 }

@@ -17,9 +17,9 @@
                     <div class="header-links">
                         <a href="../index.html">Главная</a>
                         <a href="catalog-item.html">Каталог</a>
-                        <a href="">О проекте</a>
-                        <a href="">Доставка</a>
-                        <a href="">Контакты</a>
+                        <a href="about.html">О проекте</a>
+                        <a href="delivery.html">Доставка</a>
+                        <a href="contacts.html">Контакты</a>
                     </div>
                     <div class="header-media">
                         <a href="">
@@ -38,8 +38,16 @@
         <div class="header-bottom">
             <div class="container">
                 <div class="header-bottom__inner">
-                    <div class="header-logo">
-                        <img src="../svg/logo.svg" alt="">
+                    <div class="header-bottom__parent">
+                        <div class="burger-menu active">
+                            <div class="burger-line"></div>
+                            <div class="burger-line"></div>
+                            <div class="burger-line"></div>
+                            <div class="burger-line"></div>
+                        </div>
+                        <div class="header-logo">
+                            <img src="../svg/logo.svg" alt="">
+                        </div>
                     </div>
                     <div class="header-nav" id="nav">
                         <a href="">New</a>
@@ -62,6 +70,54 @@
                             <button class="btn">Войти</button>
                         </a>
                     </div>
+                </div>
+                <div class="header-bottom__menu">
+                    <div class="menu-container">
+                        <ul class="menu-list">
+                            <li><a href="">New</a></li>
+                            <li><a href="">Футболки и поло</a></li>
+                            <li><a href="">Худи и кофты</a></li>
+                            <li><a href="">Головные уборы</a></li>
+                            <li><a href="">Sale</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-mobile">
+            <div class="header-mobile__close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_118_3413)">
+                        <path
+                            d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                            fill="#323232" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_118_3413">
+                            <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <div class="header-mobile__content">
+                <div class="header-mobile__media">
+                    <a href="">
+                        <img src="../svg/youtube.svg" alt="">
+                    </a>
+                    <a href="">
+                        <img src="../svg/facebook.svg" alt="">
+                    </a>
+                    <a href="">
+                        <img src="../svg/instagram.svg" alt="">
+                    </a>
+                </div>
+                <div class="header-mobile__nav">
+                    <a href="index.html">Главная</a>
+                    <a href="catalog-item.html">Каталог</a>
+                    <a href="team.html">Наша команда</a>
+                    <a href="why.html">Почему мы</a>
+                    <a href="delivery.html">Доставка</a>
+                    <a href="contacts.html">Контакты</a>
                 </div>
             </div>
         </div>
@@ -682,6 +738,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../js/catalog.js"></script>
+    <script src="../js/header.js"></script>
 </body>
 
 </html>
