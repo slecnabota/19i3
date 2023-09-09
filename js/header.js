@@ -29,3 +29,24 @@ closeBurger.addEventListener('click', function (e) {
   arrowBurger.classList.toggle('active');
   bodyBurger.classList.toggle('active');
 });
+// Получаем элементы
+const headerSearch = document.querySelector('.header-search');
+const searchContainer = document.querySelector('.search-container');
+const searchInner = document.querySelector('.search-inner');
+
+// Добавляем обработчик события для открытия/закрытия при клике на headerSearch
+headerSearch.addEventListener('click', function (e) {
+    e.stopPropagation(); // Остановить всплытие события, чтобы предотвратить закрытие при клике на headerSearch
+    if (searchContainer.style.display === 'block') {
+        searchContainer.style.display = 'none'; // Закрыть
+    } else {
+        searchContainer.style.display = 'block'; // Открыть
+    }
+});
+
+// Добавляем обработчик события для закрытия при клике вне search-container
+document.addEventListener('click', function (e) {
+    if (searchContainer.style.display === 'block' && e.target !== searchInner && !searchInner.contains(e.target)) {
+        searchContainer.style.display = 'none'; // Закрыть
+    }
+});

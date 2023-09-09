@@ -71,6 +71,12 @@ label{
 
 }
 .pay{
+    & .cart-right{
+        display: none;
+        @media(max-width: $L-mobile){
+            display: block;
+        }
+    }
     &-inner{
         display: flex;
         align-items: center;
@@ -110,6 +116,16 @@ label{
     input{
         width: fit-content;
     }
+}
+.custom-radio input[type="radio"] {
+    /* Установите желаемый цвет фона для радиокнопки, например, зеленый */
+    background-color: green !important;
+    
+    /* Другие стили, такие как цвет обводки и размер, можно также настроить */
+    border: 1px solid green;
+    width: 20px; /* Желаемая ширина */
+    height: 20px; /* Желаемая высота */
+    border-radius: 50%; /* Для округлой формы */
 }
 
 .custom-radio input[type="radio"]:checked + label {

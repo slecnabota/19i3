@@ -428,6 +428,73 @@ h1 {
     white-space: nowrap;
   }
 }
+.header-bottom {
+  position: relative;
+}
+
+.search-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9; /* Ensure it's above other content */
+}
+
+/* Styles for the search-inner */
+.search-inner {
+  position: absolute;
+  top: 135px;
+  width: 60%;
+  left: 20%;
+  border-radius: 0px 0px 10px 10px;
+  background: #FFF;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+@media (max-width: 1280px) {
+  .search-inner {
+    top: 120px;
+  }
+}
+@media (max-width: 1023px) {
+  .search-inner {
+    width: 80%;
+    top: 90px;
+    left: 10%;
+  }
+}
+@media (max-width: 1023px) {
+  .search-inner {
+    width: 100%;
+    top: 80px;
+    left: 0;
+  }
+}
+.search-inner input {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #242424;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+
 .footer {
   margin-top: 150px;
   background-color: #242424;
@@ -959,6 +1026,73 @@ h1 {
     white-space: nowrap;
   }
 }
+.header-bottom {
+  position: relative;
+}
+
+.search-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9; /* Ensure it's above other content */
+}
+
+/* Styles for the search-inner */
+.search-inner {
+  position: absolute;
+  top: 135px;
+  width: 60%;
+  left: 20%;
+  border-radius: 0px 0px 10px 10px;
+  background: #FFF;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+@media (max-width: 1280px) {
+  .search-inner {
+    top: 120px;
+  }
+}
+@media (max-width: 1023px) {
+  .search-inner {
+    width: 80%;
+    top: 90px;
+    left: 10%;
+  }
+}
+@media (max-width: 1023px) {
+  .search-inner {
+    width: 100%;
+    top: 80px;
+    left: 0;
+  }
+}
+.search-inner input {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #242424;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+
 .footer {
   margin-top: 150px;
   background-color: #242424;
@@ -1737,6 +1871,14 @@ label {
   resize: none;
 }
 
+.pay .cart-right {
+  display: none;
+}
+@media (max-width: 768px) {
+  .pay .cart-right {
+    display: block;
+  }
+}
 .pay-inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1801,6 +1943,16 @@ label {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.custom-radio input[type=radio] {
+  /* Установите желаемый цвет фона для радиокнопки, например, зеленый */
+  background-color: green !important;
+  /* Другие стили, такие как цвет обводки и размер, можно также настроить */
+  border: 1px solid green;
+  width: 20px; /* Желаемая ширина */
+  height: 20px; /* Желаемая высота */
+  border-radius: 50%; /* Для округлой формы */
 }
 
 .custom-radio input[type=radio]:checked + label {

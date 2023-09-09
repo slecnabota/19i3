@@ -20,15 +20,18 @@ const mainSwiper = new Swiper('#mainSwiper', {
 });
 
 //
+const deliveryButtons = document.querySelectorAll('.delivery-request');
+const circles = document.querySelectorAll('.circle');
 
-// Получаем элементы из DOM
-const circle = document.getElementById('circle');
-const deliveryButton = document.querySelector('.delivery-request');
-
-deliveryButton.addEventListener('click', () => {
-    circle.classList.toggle("clicked")
-    document.querySelector(".cart-right__del1").classList.toggle("active")
-    document.querySelector(".cart-right__del2").classList.toggle("active")
-    deliveryButton.classList.toggle('clicked');
-
+deliveryButtons.forEach(deliveryButton => {
+    deliveryButton.addEventListener('click', () => {
+        circles.forEach(circle => {
+            circle.classList.toggle("clicked");
+            document.querySelector(".cart-right__del1").classList.toggle("active");
+            document.querySelector(".cart-right__del2").classList.toggle("active");
+        });
+        document.querySelector(".cart-right__del1").classList.toggle("active");
+        document.querySelector(".cart-right__del2").classList.toggle("active");
+        deliveryButton.classList.toggle('clicked');
+    });
 });
