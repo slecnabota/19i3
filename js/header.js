@@ -50,3 +50,14 @@ document.addEventListener('click', function (e) {
         searchContainer.style.display = 'none'; // Закрыть
     }
 });
+
+const open = document.querySelector(".header-modal")
+const modal = document.querySelector(".modal");
+const close = document.querySelector(".modal-close");
+
+open.addEventListener("click", function(){
+  modal.classList.toggle("active")
+})
+close.addEventListener("click", function(){
+  modal.classList.toggle("active")
+})

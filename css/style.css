@@ -138,6 +138,158 @@ h1 {
   }
 }
 
+.swiper-button-prev, .swiper-button-next {
+  z-index: 8 !important;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+}
+.modal.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.modal-inner {
+  max-width: 425px;
+  border-radius: 15px;
+  background: #FFF;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 50px 30px;
+  position: relative;
+}
+.modal-close {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+}
+.modal-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  margin-bottom: 40px;
+}
+.modal-top button {
+  border: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  color: #696969;
+  background-color: transparent;
+}
+.modal-top button.active {
+  color: #242424;
+}
+.modal-form input,
+.modal-form label {
+  display: block;
+  width: 100%;
+}
+.modal-form input {
+  margin-top: 5px;
+  color: #242424;
+  padding: 10px 15px;
+  border: 1px solid #AEAEAE;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 19.6px */
+}
+.modal-form input::-webkit-input-placeholder {
+  color: #AEAEAE;
+  font-family: "Rubik", sans-serif;
+}
+.modal-form input::-moz-placeholder {
+  color: #AEAEAE;
+  font-family: "Rubik", sans-serif;
+}
+.modal-form input:-ms-input-placeholder {
+  color: #AEAEAE;
+  font-family: "Rubik", sans-serif;
+}
+.modal-form input::-ms-input-placeholder {
+  color: #AEAEAE;
+  font-family: "Rubik", sans-serif;
+}
+.modal-form input::placeholder {
+  color: #AEAEAE;
+  font-family: "Rubik", sans-serif;
+}
+.modal-form label {
+  color: #242424;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 19.6px */
+  margin-bottom: 20px;
+}
+.modal-form label:last-child {
+  margin-bottom: 0;
+}
+.modal p {
+  text-align: center;
+  color: #242424;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.modal p a {
+  text-decoration: underline;
+  display: inline;
+  color: #242424;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+}
+.modal .btn {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  background: white;
+}
 .header-top {
   background: #EFEFEF;
   padding: 10px 0;
@@ -383,6 +535,20 @@ h1 {
   transition: all 0.3s ease;
 }
 
+main {
+  margin-top: 135px;
+}
+@media (max-width: 1280px) {
+  main {
+    margin-top: 120px;
+  }
+}
+@media (max-width: 1023px) {
+  main {
+    margin-top: 80px;
+  }
+}
+
 .header-bottom__menu {
   display: none;
   overflow: hidden;
@@ -433,13 +599,15 @@ h1 {
 
 .search-container {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  z-index: 9; /* Ensure it's above other content */
+  background: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  z-index: 9;
+  /* Ensure it's above other content */
 }
 
 /* Styles for the search-inner */
@@ -491,7 +659,8 @@ h1 {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 140%; /* 19.6px */
+  line-height: 140%;
+  /* 19.6px */
 }
 
 .hero-wrapper {

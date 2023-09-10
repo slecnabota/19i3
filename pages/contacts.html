@@ -66,9 +66,7 @@
                         <a href="acc-order.html" class="header-basket header-btn">
                             <img src="../svg/basket.svg" alt="">
                         </a>
-                        <a href="">
-                            <button class="btn">Войти</button>
-                        </a>
+                        <button class="btn header-modal">Войти</button>
                     </div>
                 </div>
                 <div class="header-bottom__menu">
@@ -251,6 +249,49 @@
             </div>
         </div>
     </footer>
+   
+    <div class="modal" id="modal">
+        <div class="modal-inner">
+            <div class="modal-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_117_3156)">
+                    <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="#323232"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_117_3156">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+            </div>
+            <div class="modal-wrapper">
+                <div class="modal-top">
+                    <button>Вход </button>
+                    <button class="active">Регистрация</button>
+                </div>
+                <form action="" class="modal-form">
+                    <label for="mEmail">
+                        Ваша почта
+                        <input type="text" id="mEmail" placeholder="Введите ваш e-mail"> 
+                    </label>
+                    <label for="mPhone">
+                        Номер телефона
+                        <input type="tel" id="mPhone" placeholder="+7 (___) ___-__-__">
+                    </label>
+                    <label for="mPassword">
+                        Пароль
+                        <input type="password" id="mPassword">
+                    </label>
+                    <p>
+                        Регистрируясь или авторизуясь вы соглашаетесь с <a href="">Пользовательским соглашением</a> и <a href="">Политикой обработки персональных данных</a>
+                        
+                    </p>
+                    <button class="btn">Зарегестрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="../js/header.js"></script>
 </body>
 

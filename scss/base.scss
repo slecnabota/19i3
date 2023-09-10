@@ -19,12 +19,15 @@ $mobile: 475px;
     padding: 0;
     box-sizing: border-box;
 }
-body.lock{
+
+body.lock {
     overflow: hidden;
 }
+
 .container {
     padding: 0 4%;
-    @media(max-width: $L-mobile){
+
+    @media(max-width: $L-mobile) {
         padding: 0 20px;
     }
 }
@@ -104,13 +107,137 @@ h1 {
     font-weight: 400;
     line-height: 115%;
 
-    @media(max-width: $laptop){
+    @media(max-width: $laptop) {
         font-size: 28px;
     }
-    @media(max-width: $tablet){
+
+    @media(max-width: $tablet) {
         font-size: 24px;
     }
+
     @media(max-width: $mobile) {
         font-size: 20px;
+    }
+}
+.swiper-button-prev, .swiper-button-next{
+    z-index: 8 !important;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    &.active{
+        display: flex;
+    }
+    &-inner {
+        max-width: 425px;
+        border-radius: 15px;
+        background: #FFF;
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 50px 30px;
+        position: relative;
+    }
+
+    &-close {
+        width: fit-content;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        cursor: pointer;
+    }
+
+    &-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 40px;
+        margin-bottom: 40px;
+
+        button {
+            border: none;
+            font-family: $rubik;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            color: #696969;
+            background-color: transparent;
+
+            &.active {
+                color: #242424;
+            }
+        }
+    }
+
+    &-form {
+
+        input,
+        label {
+            display: block;
+            width: 100%;
+        }
+
+        input {
+            margin-top: 5px;
+            color: #242424;
+            padding: 10px 15px;
+            border: 1px solid #AEAEAE;
+            font-family: $rubik;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+
+            /* 19.6px */
+            &::placeholder {
+                color: #AEAEAE;
+                font-family: $rubik;
+            }
+        }
+
+        label {
+            color: #242424;
+            font-family: $rubik;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            /* 19.6px */
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    p {
+        text-align: center;
+        color: #242424;
+        font-family: $rubik;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        a{
+            text-decoration: underline;
+            display: inline;
+            color: #242424;
+            font-family: $rubik;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 140%;
+        }
+    }
+    .btn{
+        width: 100%;
+        margin-top: 40px;
     }
 }
