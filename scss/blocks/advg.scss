@@ -11,6 +11,9 @@
     }
     &-title{
         margin-bottom: 35px;
+        @media(max-width: $mobile){
+            margin-bottom: 10px;
+        }
     }
     &-cards{
         display: grid;

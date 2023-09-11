@@ -173,10 +173,12 @@ const sizeSelect = document.getElementById("size-select");
 
 function openPopup() {
     popup.style.display = "flex";
+    document.body.classList.toggle('lock');
 }
 
 function closePopupFunc() {
     popup.style.display = "none";
+    document.body.classList.toggle('lock');
 }
 
 const cards = document.querySelectorAll(".item.card");

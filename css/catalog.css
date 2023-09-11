@@ -563,6 +563,11 @@ main {
 .menu-container {
   width: 100%;
   overflow-x: scroll;
+  scrollbar-width: none;
+}
+.menu-container::-webkit-scrollbar {
+  width: 0;
+  display: none;
 }
 
 .menu-list {
@@ -1059,13 +1064,8 @@ main {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   z-index: 9999;
+  padding: 50px 0 0;
 }
 .popup-container .card-image {
   background-repeat: no-repeat;
@@ -1218,14 +1218,31 @@ main {
             align-items: flex-start;
   }
 }
+.popup-parent {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
 .popup-inner {
   width: 85%;
-  height: 80%;
+  height: 100%;
   border-radius: 15px;
   background: #FFF;
   -webkit-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.15);
-  overflow: auto;
+  overflow-y: auto;
+}
+.popup-inner::-webkit-scrollbar {
+  width: 0;
+  display: none;
 }
 @media (max-width: 768px) {
   .popup-inner {

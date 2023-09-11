@@ -563,6 +563,11 @@ main {
 .menu-container {
   width: 100%;
   overflow-x: scroll;
+  scrollbar-width: none;
+}
+.menu-container::-webkit-scrollbar {
+  width: 0;
+  display: none;
 }
 
 .menu-list {
